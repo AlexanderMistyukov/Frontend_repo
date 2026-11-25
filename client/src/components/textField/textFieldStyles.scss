@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+  &__label {
+    font-size: 13px;
+    color: $color-muted;
+
+    &_strong {
+      font-weight: 600;
+      color: $color-text;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 9px 12px;
+    font: inherit;
+    color: $color-text;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    outline: none;
+
+    &:focus {
+      border-color: $color-primary;
+    }
+
+    &_multiline {
+      resize: vertical;
+    }
+  }
+
+  &__info {
+    font-size: 12px;
+
+    &_hint {
+      color: $color-muted;
+    }
+
+    &_error {
+      color: $color-danger;
+    }
+
+    &_success {
+      color: $color-primary;
+    }
+  }
+}

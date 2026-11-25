@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+
+.user-menu {
+  position: relative;
+  z-index: 20;
+
+  &__icon {
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(20, 30, 26, 0.15);
+  }
+
+  &__list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 220px;
+    color: $color-text;
+    background: $color-surface;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    overflow: hidden;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: $color-muted;
+    border-bottom: 1px solid $color-border;
+
+    strong {
+      font-size: 15px;
+      color: $color-text;
+    }
+  }
+
+  &__item {
+    padding: 11px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-selected;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { IncomesList } from './IncomesList';

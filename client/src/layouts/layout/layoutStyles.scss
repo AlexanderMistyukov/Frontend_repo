@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    height: $header-height;
+    padding: 0 24px;
+    color: #fff;
+    background: $color-primary;
+    box-shadow: $shadow;
+  }
+
+  &__logo {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__title {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+}

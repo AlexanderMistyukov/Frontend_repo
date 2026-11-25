@@ -1,0 +1,86 @@
+@import '../../styles/variables.scss';
+
+.statistics-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+
+  &__item {
+    padding: 12px 16px;
+    background: $color-surface;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+
+  &__title {
+    font-size: 12px;
+    color: $color-muted;
+  }
+
+  &__value {
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 600;
+
+    &_income {
+      color: $color-income;
+    }
+
+    &_expense {
+      color: $color-expense;
+    }
+  }
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__toggle {
+    align-self: flex-start;
+    font-size: 13px;
+    color: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.statistics-table {
+  background: $color-surface;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow-x: auto;
+
+  &__row {
+    display: grid;
+    grid-template-columns: minmax(160px, 2fr) repeat(4, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &_head {
+      font-size: 12px;
+      color: $color-muted;
+    }
+  }
+
+  &__cell {
+    text-align: right;
+
+    &_income {
+      color: $color-income;
+    }
+
+    &_expense {
+      color: $color-expense;
+    }
+  }
+}

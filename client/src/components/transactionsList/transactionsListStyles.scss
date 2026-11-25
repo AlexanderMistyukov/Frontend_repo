@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: $radius;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-bg;
+    }
+
+    // selected объявлен после hover, поэтому выбранный элемент не теряет подсветку при наведении
+    &_selected,
+    &_selected:hover {
+      background: $color-selected;
+    }
+  }
+
+  &__main {
+    min-width: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  &__sub {
+    margin-top: 2px;
+    font-size: 12px;
+    color: $color-muted;
+    overflow-wrap: anywhere;
+  }
+
+  &__amount {
+    flex-shrink: 0;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &__empty {
+    padding: 12px;
+    color: $color-muted;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 60px 1fr 220px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid $color-border;
+
+    &_head {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-muted;
+    }
+  }
+
+  &__login {
+    overflow-wrap: anywhere;
+  }
+
+  &__you {
+    color: $color-muted;
+  }
+}

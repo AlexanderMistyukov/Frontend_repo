@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.incomes-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  &__sub {
+    font-size: 12px;
+    color: $color-muted;
+    overflow-wrap: anywhere;
+  }
+
+  &__amount {
+    flex-shrink: 0;
+    font-weight: 600;
+    color: $color-income;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    color: $color-muted;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-danger;
+    }
+  }
+
+  &__empty {
+    color: $color-muted;
+  }
+}

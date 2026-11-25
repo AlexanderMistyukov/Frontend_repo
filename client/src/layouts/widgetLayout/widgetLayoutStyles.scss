@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.widget-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px;
+  background: linear-gradient(160deg, $color-selected 0%, $color-bg 60%);
+}
